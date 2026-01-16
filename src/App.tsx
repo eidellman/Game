@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { alphabet, proLang, words } from "./variables";
 import clsx from "clsx";
+import Confetti from 'react-confetti';
 import "./App.css";
 
 function App() {
@@ -47,8 +48,10 @@ function App() {
           </p>
         </div>
         {isWon ? (
+          
           <div className="win-container">
-            <h3>You win!</h3>
+            <Confetti></Confetti>
+            <h3>You won!</h3>
             <p>Well done</p>
           </div>
         ) : null}
